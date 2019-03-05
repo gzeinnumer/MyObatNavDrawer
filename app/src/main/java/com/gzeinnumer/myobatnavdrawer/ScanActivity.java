@@ -79,5 +79,54 @@ public class ScanActivity extends AppCompatActivity {
                 .setAutoFocusEnabled(true)
                 .build();
 
+        barcode.getHolder().addCallback(new SurfaceHolder.Callback() {
+            @Override
+            public void surfaceCreated(SurfaceHolder holder) {
+
+                if (ActivityCompat.checkSelfPermission(ScanActivity.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ScanActivity.this, new String[]{Manifest.permission.CAMERA}, PERMISSION);
+                    return;
+                }
+                try {
+                    cameraSource.start(barcode.getHolder());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+
+            }
+
+            @Override
+            public void surfaceDestroyed(SurfaceHolder holder) {
+
+                cameraSource.stop();
+            }
+        });
+
+        barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
+            @Override
+            public void release() {
+
+            }
+
+            @Override
+            public void receiveDetections(Detector.Detections<Barcode> detections) {
+                final SparseArray<Barcode> qr = detections.getDetectedItems();
+                if (qr.size() != 0){
+                    tvkodebrg.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+                            vibrator.vibrate(999);
+                            tvkodebrg.setText(qr.valueAt(0).displayValue);
+                        }
+                    });
+                }
+            }
+        });
     }
 }
