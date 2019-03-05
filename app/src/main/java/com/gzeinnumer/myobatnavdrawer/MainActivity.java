@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_upload_hasil) {
             Intent intent = new Intent(getApplicationContext(), ScanActivity.class);
             startActivity(intent);
-
         } else if (id == R.id.nav_logout) {
             this.finish();
             System.exit(0);
