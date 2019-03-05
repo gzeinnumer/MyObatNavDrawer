@@ -1,6 +1,7 @@
 package com.gzeinnumer.myobatnavdrawer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -86,6 +87,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_def_lokasi) {
             // Handle the camera action
         } else if (id == R.id.nav_upload_hasil) {
+            Intent intent = new Intent(getApplicationContext(), ScanActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_logout) {
             this.finish();
