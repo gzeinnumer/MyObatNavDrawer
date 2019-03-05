@@ -1,5 +1,6 @@
 package com.gzeinnumer.myobatnavdrawer;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -87,7 +88,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_upload_hasil) {
 
         } else if (id == R.id.nav_logout) {
-
+            this.finish();
+            System.exit(0);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
