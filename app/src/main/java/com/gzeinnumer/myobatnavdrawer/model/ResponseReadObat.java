@@ -34,7 +34,20 @@ public class ResponseReadObat{
 	@SerializedName("UnitName")
 	private String unitName;
 
-	public void setSatuan(String satuan){
+    public ResponseReadObat(String satuan, String unitID, String brgID, String brgName, String jam, String lokasiName, int qty, String tgl, String lokasiID, String unitName) {
+        this.satuan = satuan;
+        this.unitID = unitID;
+        this.brgID = brgID;
+        this.brgName = brgName;
+        this.jam = jam;
+        this.lokasiName = lokasiName;
+        this.qty = qty;
+        this.tgl = tgl;
+        this.lokasiID = lokasiID;
+        this.unitName = unitName;
+    }
+
+    public void setSatuan(String satuan){
 		this.satuan = satuan;
 	}
 
