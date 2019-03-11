@@ -8,7 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 //todo 15.
 public class RetroServer {
 
-    public static final String BASE_URL = "http://dev.smart-ics.com:212/pindai-opname/api/History/" ;
+//    public static final String BASE_URL = "http://dev.smart-ics.com:212/pindai-opname/api/History/" ;
+    public static final String BASE_URL = "http://dev.smart-ics.com:212/pindai-opname/api/" ;
 
 
     public static Retrofit setInit(){

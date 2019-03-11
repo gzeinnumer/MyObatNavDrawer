@@ -82,6 +82,4 @@ public class AdapterReadOpData extends RecyclerView.Adapter<AdapterReadOpData.My
             ButterKnife.bind(this, itemView);
         }
     }
-
-
 }

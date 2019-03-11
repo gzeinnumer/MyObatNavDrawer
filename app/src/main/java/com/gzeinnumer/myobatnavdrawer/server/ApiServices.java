@@ -2,6 +2,7 @@ package com.gzeinnumer.myobatnavdrawer.server;
 
 
 
+import com.gzeinnumer.myobatnavdrawer.model.ResponseGetData;
 import com.gzeinnumer.myobatnavdrawer.model.ResponseReadObat;
 
 import java.util.List;
@@ -15,10 +16,13 @@ import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Query;
 
 
 public interface ApiServices {
-    @GET("ListData")
+    @GET("History/ListData")
     Call<List<ResponseReadObat>> getAllOpData();
 
+    @GET("barang/getdata")
+    Call<ResponseGetData> getOpData(@Query("id") String id);
 }

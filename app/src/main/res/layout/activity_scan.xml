@@ -14,13 +14,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvkodebrg"
-        android:text="Kode Brg"/>
+        android:id="@+id/tvkodebrg"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edkodebrg"
-        android:hint="AM001-01"
         android:enabled="false"
         />
     <TextView
@@ -32,7 +30,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ednamabrg"
-        android:hint="Ampicilin Generic 50 Mg"
         android:textStyle="bold"
         android:enabled="false"/>
     <TextView
@@ -44,7 +41,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edsatuan"
-        android:hint="Strip"
         android:enabled="false"/>
     <TextView
         android:layout_width="match_parent"
@@ -66,7 +62,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edqtystok"
-        android:hint="33"
         android:textStyle="bold"/>
     <Button
         android:layout_width="match_parent"
