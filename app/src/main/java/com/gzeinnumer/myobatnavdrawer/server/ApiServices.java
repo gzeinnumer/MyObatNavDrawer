@@ -1,8 +1,11 @@
+
+
 package com.gzeinnumer.myobatnavdrawer.server;
 
 
 
 import com.gzeinnumer.myobatnavdrawer.model.ResponseGetData;
+import com.gzeinnumer.myobatnavdrawer.model.ResponseInsertData;
 import com.gzeinnumer.myobatnavdrawer.model.ResponseReadObat;
 
 import java.util.List;
@@ -25,4 +28,10 @@ public interface ApiServices {
 
     @GET("barang/getdata")
     Call<ResponseGetData> getOpData(@Query("id") String id);
+
+    @FormUrlEncoded
+    @POST("stok/save")
+    Call<ResponseInsertData> sentOpData(@Field("BrgID") String BrgID,
+                                    @Field("LokasiStokID") String LokasiStokId,
+                                    @Field("Qty") int Qty );
 }

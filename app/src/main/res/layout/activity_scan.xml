@@ -47,12 +47,21 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvlokasistok"
         android:text="Lokasi Stok"/>
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/splokasistok">
 
-    </Spinner>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/splokasistok" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvlokasiUnit"
+        android:text="Lokasi Stok"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/splokasiUnit" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
